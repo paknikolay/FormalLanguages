@@ -1,0 +1,144 @@
+\documentclass{article}
+\usepackage{enumitem}
+\setlist[enumerate,1]{start=0} 
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ dsfont }
+\usepackage{mathtools}
+\usepackage{ gensymb }
+\usepackage{ amssymb }
+
+\usepackage[left=1cm,right=1cm,
+top=1cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\begin{document}
+	\LARGE
+		Пак Николай, 696,  \\
+		$w = baaababbbbaa\\
+		S\rightarrow SaTb | 	SbUa|\varepsilon$,  $T \rightarrow TaTb| \varepsilon$, $U \rightarrow UbUa| \varepsilon$, $S' \rightarrow S$;\\
+		Разберем алгоритмом Эрли:\\
+	\begin{enumerate}
+		\item $I_0$\\
+		$S'\rightarrow  \cdot S,0$\\
+		Predict:\\
+		$S \rightarrow \cdot SaTb,0$\\
+		$S \rightarrow \cdot SbUa,0$\\
+		$S \rightarrow \cdot ,0$\\		
+		Complete:\\
+		$S \rightarrow  S \cdot aTb,0$\\
+		$S \rightarrow S  \cdot bUa,0$\\
+		$S' \rightarrow S \cdot, 0$\\
+		
+		\item $I_1$\\
+		Scan:\\ 
+		$S \rightarrow Sb \cdot Ua,0$\\
+		Predict:\\
+		$U \rightarrow \cdot UbUa, 1$\\
+		$U \rightarrow \cdot, 1$\\
+		Complete:\\
+		$S \rightarrow SbU \cdot a,0$\\
+		$U \rightarrow U \cdot bUa, 1$\\
+		
+		\item $I_2$\\
+		Scan:\\
+		$S \rightarrow SbU a \cdot ,0$\\
+		Complete:\\
+		$S \rightarrow  S \cdot aTb,0$\\
+		$S \rightarrow S  \cdot bUa,0$\\
+		$S' \rightarrow S \cdot, 0$\\
+		
+		\item $I_3$\\
+		Scan:\\ 
+		$S \rightarrow  S a \cdot Tb,0$\\
+		Predict:\\
+		$T \rightarrow \cdot, 3$\\
+		$T \rightarrow \cdot TaTb, 3$\\
+		Complete:\\
+		$S \rightarrow  S aT \cdot b,0$\\
+		$T \rightarrow T \cdot aTb, 3$\\
+		\item $I_4$\\
+		Scan:\\
+		$T \rightarrow Ta \cdot Tb, 3$\\
+		Predict:\\
+		$T \rightarrow \cdot, 4$\\
+		$T \rightarrow \cdot TaTb, 4$\\
+		Complete:\\
+		$T \rightarrow TaT \cdot b, 3$\\
+		$T \rightarrow T \cdot aTb, 4$\\
+		 \item $I_5$\\
+		 Scan:\\
+		$T \rightarrow TaTb \cdot , 3$\\
+		Complete:\\
+		$S \rightarrow  S aT \cdot b,0$\\
+		$T \rightarrow T \cdot aTb, 3$\\
+		
+		\item $I_6$\\
+		Scan: \\
+		$T \rightarrow Ta \cdot Tb, 3$\\
+			Predict:\\
+		$T \rightarrow \cdot, 6$\\
+		$T \rightarrow \cdot TaTb, 6$\\
+		Complete:\\
+		$T \rightarrow TaT \cdot b, 3$\\
+		$T \rightarrow T \cdot aTb, 6$\\
+		
+		\item $I_7$\\
+		Scan:\\
+		$T \rightarrow TaTb\cdot, 3$\\
+		Complete:\\
+		$S \rightarrow  S aT \cdot b,0$\\
+		$T \rightarrow  T \cdot aTb, 3$\\
+		
+		\item $I_8$\\
+		Scan:\\
+		$S \rightarrow  S aTb \cdot,0$\\
+		Complete:\\		
+		$S'\rightarrow S \cdot,0$\\
+		$S \rightarrow S \cdot aTb,0$\\
+		$S \rightarrow S \cdot bUa,0$\\
+		
+		\item $I_9$\\
+		Scan:\\
+		$S \rightarrow Sb \cdot Ua,0$\\
+		Predict:\\
+		$U \rightarrow \cdot UbUa, 9$\\
+		$U \rightarrow \cdot, 9$\\
+		Complete:\\
+		$S \rightarrow SbU \cdot a, 0$\\
+		$U \rightarrow U \cdot bUa, 9$\\
+		
+		\item $I_{10}$\\
+		Scan:\\
+		$U \rightarrow Ub \cdot Ua, 9$\\
+		Predict:\\
+		$U \rightarrow \cdot UbUa, 10$\\
+		$U \rightarrow \cdot, 10$\\
+		Complete:\\
+		$S \rightarrow UbU \cdot a, 9$\\
+		$U \rightarrow U \cdot bUa, 10$\\
+		
+		\item $I_{11}$\\
+		Scan:\\		
+		$S \rightarrow UbUa \cdot, 9$\\
+		Complete:\\
+		$S \rightarrow SbU \cdot a,0$\\
+		$U \rightarrow U \cdot bUa, 9$\\
+		
+		\item $I_{12}$\\
+		Scan:\\
+		$S \rightarrow SbUa \cdot,0$\\
+		Complete:\\
+		$S \rightarrow  S \cdot aTb,0$\\
+		$S \rightarrow S  \cdot bUa,0$\\
+		$S' \rightarrow S \cdot, 0$ $\Rightarrow  w \in L(G)$ \\ 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	\end{enumerate}
+\end{document}
