@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage[all]{xy}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ dsfont }
+\usepackage{mathtools}
+\usepackage{ gensymb }
+\usepackage{ amssymb }
+\usepackage[left=1cm,right=1cm,
+top=1cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\begin{document}
+\LARGE
+	Пак Николай, 5ДЗ, 696\\
+	\begin{enumerate}
+		\item 
+			\begin{enumerate}
+				\item
+					$S\rightarrow SAT$, $S\rightarrow T$, $T \rightarrow UBT$, $T \rightarrow U$, $U \rightarrow UU$, $U \rightarrow c$, $U \rightarrow \varepsilon$,$A \rightarrow a$, $A \rightarrow \varepsilon$, $B \rightarrow b$\\
+				\item
+					$S\rightarrow SK$, $K\rightarrow AT$ $S\rightarrow T$, $T \rightarrow UM$,
+					$M \rightarrow BT$, $T \rightarrow U$, $U \rightarrow UU$, $U \rightarrow c$, $U \rightarrow \varepsilon$,$A \rightarrow a$,$A \rightarrow \varepsilon$,  $B \rightarrow b$, $S' \rightarrow S$\\		
+				\item
+				$U, A, T, S, K $ - $\varepsilon$-порождающие\\
+					$S\rightarrow SK$, $K\rightarrow AT$ $S\rightarrow T$, $T \rightarrow UM$,
+					$M \rightarrow BT$, $T \rightarrow U$, $U \rightarrow UU$, $U \rightarrow c$,$A \rightarrow a$, $B \rightarrow b$, $S' \rightarrow S$\\
+					$S \rightarrow K$, $K \rightarrow A$, $K \rightarrow T$, $T \rightarrow M$, $M \rightarrow B$\\	 
+					\item 
+					$S\rightarrow SK$, $K\rightarrow AT$, $T \rightarrow UM$,
+					$M \rightarrow BT$, $U \rightarrow UU$, $U \rightarrow c$,$A \rightarrow a$, $B \rightarrow b$\\
+					$M \rightarrow b$\\
+					$K \rightarrow a$\\
+					$T \rightarrow b$, $T \rightarrow BT$\\
+					$T \rightarrow UU$, $T \rightarrow c$\\
+					$K \rightarrow UM$, $K \rightarrow b$,$K \rightarrow BT$,$K \rightarrow UU$,$K \rightarrow c$\\									
+					$S \rightarrow AT$, $S \rightarrow UM$, $S \rightarrow b$, $S \rightarrow BT$, $S \rightarrow UU$, $S \rightarrow c$\\
+					$S' \rightarrow SK$,$S' \rightarrow AT$,$S' \rightarrow UM$,$S' \rightarrow b$,$S' \rightarrow BT$,$S' \rightarrow UU$,$S' \rightarrow c$\\
+			\end{enumerate}		
+		\item
+			\begin{enumerate}
+				
+				\item
+					Однозначная грамматика, так как в слове ровно одна буква $c$, поэтому, найдя ее в слове, можно понять по какому из gравил она получилась, если слева буква $a$,  то по второму правилу, иначе с по первому, дальше, удалив буквы полученные по соответствующему правилу, можно снова однозначно определить какое правило было применено.\\
+					
+				\item
+					$S \rightarrow TV|VT|aTa$, $T\rightarrow bVb$, $V \rightarrow aTb|c$
+					Подставим $T$\\
+					$S \rightarrow bVbV|VbVb|abVba$, $V \rightarrow abVbb|c$\\
+					Если слово было выведено по 3-му правилу для $S$, то там будет только одна буква $c$, и разбор проводится уже однозначно по правилу для $V$;\\
+					Если же было премено правило 1 для $S$, то оно будет начинаться с буквы $b$ тоьлко в этом случае, как видно из правил вывода, и снова, можно выделить куски вида $abVbb$ однозначно, так как есль буква $c$, получим однозначный разбор слова.\\
+					Аналогично, если было применено правило 2, то слово будет начинаться с буквы $a$,и снова можно однозначно разобрать слово, выделяя $abVbb$, начиная с буквы $c$, если $V$ раскрылось по первнму правилу.\\
+					
+				
+			\end{enumerate}
+	\end{enumerate}
+ 
+\end{document}

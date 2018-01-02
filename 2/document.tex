@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage[all]{xy}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ dsfont }
+\usepackage{mathtools}
+\usepackage{ gensymb }
+\usepackage{ amssymb }
+\usepackage[left=1cm,right=1cm,
+top=1cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\begin{document}
+\LARGE
+	Пак Николай, 1ДЗ, 696\\
+	\begin{enumerate}
+		\item 
+			\begin{enumerate}
+				\item
+				~\
+				 \entrymodifiers={++[o][F-]}
+					\xymatrix{
+						*\txt{start} \ar[r] 
+						& 0 \ar@(r,u)_a \ar[r]_b 
+						& 1 \ar[r]_a 
+						& 2 \ar@(r,u)_a \ar[r]_b 
+						& *++[o][F=]{3}  \ar@(r,u)_a \ar[r]_b 
+						& *++[o][F=]{4} \ar@(r,u)_a
+										}
+				\item
+				~\
+					\entrymodifiers={++[o][F-]}
+						\xymatrix@-1pc{
+							*\txt{start} \ar[r] 
+							& 0 \ar[r]_a 
+							& 1 \ar[r]_b 
+							& 2 \ar[r]_a 
+							& 3 \ar[r]_b 
+							& 4 \ar[r]_a \ar@/^3pc/[rr]_b
+							& 5 \ar@/^3pc/[l]_b
+							& 6 \ar[r]_a
+							& 7 \ar[r]_b
+							& 8 \ar[r]_a
+							& 9 \ar[r]_a
+							& 10 \ar[r]_b
+							& 11 \ar[r]_a
+							&
+						}						
+			\end{enumerate}
+	\end{enumerate}
+ 
+\end{document}

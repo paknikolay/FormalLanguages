@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage[all]{xy}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ dsfont }
+\usepackage{mathtools}
+\usepackage{ gensymb }
+\usepackage{ amssymb }
+\usepackage[left=1cm,right=1cm,
+top=1cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\begin{document}
+\LARGE
+	Пак Николай, 4ДЗ, 696\\
+	\begin{enumerate}
+		\item 
+			\begin{enumerate}
+				\item
+				Рассмотрим слово $w = uav$, в котором $|v| = n \ge 1$, тогда $xy = ua$, $|xy| \le n$, тк $|u| < n$, $|y| \ge 1$, тк там есть хотя бы а,  тогда по лемме о разрастании $xy^iv \in L$, но при большом i, таком что $|u'a| = |xy| \ge n+1$, $|u'| \ge n$, значит оно не принадлежит языку, значит он не автоматен.\\ 	
+				\item
+					Так как каждое вхождение подстроки aba также дает одно вхождение строки ab, то последовательности abab быть не может, а также последовательности ab, после которой не идет буква а быть не может, так как это нарушит необходимое равенство в количетстве подстрок aba и ab, т.о. после aba иможет быть только буква a, или конец слова. Получаем регулярное выражение:\\
+					$b^*(a^*abaa^*)^* $, значит язык автоматен 
+			\end{enumerate}
+
+	\end{enumerate}
+ 
+\end{document}

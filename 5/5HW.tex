@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage[all]{xy}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ dsfont }
+\usepackage{mathtools}
+\usepackage{ gensymb }
+\usepackage{ amssymb }
+\usepackage[left=1cm,right=1cm,
+top=1cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\begin{document}
+\LARGE
+	Пак Николай, 5ДЗ, 696\\
+	\begin{enumerate}
+		\item 
+			\begin{enumerate}
+				\item
+					$\{w \in {a,b}^* |$ $|w|_a = 2*|w|_b \land \forall u \sqsubseteq w$  $|w|_a \ge 2*|w|_b\}$\\
+					Из построения видно, для всех слов из данной грамматики это выполнено.\\
+					Докажем в обратную сторону, тк выполнено  $|w|_a \ge 2*|w|_b\}$ для любого слова w для любого префикса, то можно выделить подпоследоватеность $aab$, удалим ее, после удаления все свойства сохранятся, поэтому можно повторять этот процесс пока не получиться $\varepsilon$ тк $|w|_a = 2*|w|_b$, а значит это слово w можно построить в грамматике.    \\
+				\item
+					Заметим что $S \rightarrow aSaS | bSbS|\varepsilon$ эквивалентно $S \rightarrow aSa |bSb| SS| \varepsilon$\\
+					Тк если заменять 2-ю S в правилах $S \rightarrow aSaS | bSbS$, то эту операцию можно заменить на соответствующую замену в $SS \rightarrow SSS$ где первые 2 S заменяются на соотв-ие $aSa |bSb$, и обратно замену в $SS$ можно заменить заменой 2-й S в $S \rightarrow aSaS | bSbS$ на $aSaS(=\varepsilon) | bSbS(=\varepsilon)$, т.е последняя S заменяется на $\varepsilon$;\\
+					Т.О эти правила задают ПСП из 2-х типов скобок. 
+			\end{enumerate}
+		
+		\item
+			\begin{enumerate}
+				\item
+					$S \rightarrow aSa$\\
+					$S \rightarrow bSb$\\
+					$S \rightarrow \varepsilon$\\
+					$S \rightarrow a$\\
+					$S \rightarrow b$\\
+				\item
+					$S \rightarrow aSb$\\\
+					
+					$S \rightarrow a$  ($|w|_a =| w|_b - 1$)\\
+					$S \rightarrow aaaA$\\
+					$A \rightarrow aA$\\
+					$A \rightarrow \varepsilon$\\							
+					
+					$S \rightarrow B$\\
+					$B \rightarrow bB$\\
+					$B \rightarrow \varepsilon$\\							
+
+				\item 
+					Заметим, что минимальное количество 'a' равно 4, а 'b' равно 3, чтобы было выполнено неравенство($3 < 4 < 5$). И если добавлять либо в 2 раза больше 'a' чем 'b', или их поровну, то неравенство не нарушится.\\
+					$S \rightarrow QaQaQaQaQbQbQbQ$ | все его перестановки\\
+					$Q \rightarrow ab$ $|$ $ba$\\
+					$Q \rightarrow aab$ $|$ $aba$ $|$ $baa$\\\\									
+				\item
+					$S \rightarrow a$\\
+					$S \rightarrow baa$\\
+					$S \rightarrow SbS$\\
+					$S \rightarrow bSbSa$\\
+												
+				\item
+					$S \rightarrow A$\\ 
+					$A \rightarrow aB|bB|cB\ldots$ все символы алфавита после которых стоит нетерминал B\\
+					$A \rightarrow AA$\\
+					$B \rightarrow ^*$ $|$ $^+ $ $|$ $ \varepsilon$ после закрывающей скобки или символа алфавита может быть знак $^*$, или $^+$, или ничего\\
+					$S \rightarrow (SOS)B$ оператор и 2 операнда в скобочках\\
+					$S \rightarrow SOS$ оператор и 2 операнда\\
+					$O \rightarrow +|\cdot$  знаки плюс,умножение\\
+					
+										
+					
+			\end{enumerate}
+			
+	
+	\end{enumerate}
+ 
+\end{document}
